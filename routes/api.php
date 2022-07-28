@@ -17,10 +17,10 @@ use App\Http\Controllers\PosterRefundController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::post('/login', [AuthController::class, 'posterLogin']);
+// Route::post('/login', [AuthController::class, 'posterLogin']);
 // Route::post('/register', [AuthController::class, 'posterRegister']);
 Route::group(['prefix' => 'poster', 'namespace' => 'Poster'], function($router){
-    // Route::post('/login', [AuthController::class, 'posterLogin']);
+    Route::post('/login', [AuthController::class, 'posterLogin']);
     Route::post('/register', [AuthController::class, 'posterRegister']);
     Route::post('/logout', [AuthController::class, 'posterLogout']);
 
