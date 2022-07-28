@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Poster;
 use App\Models\PosterUploads;
+use App\Models\Solution;
 use Validator;
 
 class PosterUploadsController extends Controller
@@ -84,6 +85,8 @@ class PosterUploadsController extends Controller
             $data->deadline = $deadline;
             $data->budget = $budget;
             $data->save();
+
+            // save intp 
 
             // return json response
             return response()->json([

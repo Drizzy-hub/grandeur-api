@@ -15,6 +15,15 @@ return new class extends Migration
     {
         Schema::create('solutions', function (Blueprint $table) {
             $table->id();
+            $table->string("matricNo");
+            $table->string("email");
+            $table->string("level");
+            $table->string("budget");
+            $table->string("title");
+            $table->text("summary");
+            $table->dateTime("date_upload");
+            $table->string("deadline");
+            $table->string("file_id");
             $table->timestamps();
         });
     }
