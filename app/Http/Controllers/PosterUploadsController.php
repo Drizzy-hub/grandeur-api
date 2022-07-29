@@ -86,7 +86,16 @@ class PosterUploadsController extends Controller
             $data->budget = $budget;
             $data->save();
 
-            // save intp 
+            // save into solutions
+            $sol = new Solution;
+            $sol->file_id = $fileid;
+            $sol->matricNo = $matricNo;
+            $sol->email = $email;
+            $sol->level = $user->level;
+            $sol->title = $title;
+            $sol->summary = $desc;
+            $sol->deadline = $deadline;
+            $sol->budget = $budget;
 
             // return json response
             return response()->json([
