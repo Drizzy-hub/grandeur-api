@@ -96,6 +96,7 @@ class PosterUploadsController extends Controller
             $sol->summary = $desc;
             $sol->deadline = $deadline;
             $sol->budget = $budget;
+            $sol->save();
 
             // return json response
             return response()->json([
